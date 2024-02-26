@@ -1,0 +1,5 @@
+C:\TraningWorkshop\csharp\Library_desktop\Library_desktop\bin\Release\net8.0-windows\app.publish\Library_desktop.exe
+C:\TraningWorkshop\csharp\Library_desktop\Library_desktop\bin\Release\net8.0-windows\app.publish\Library_desktop.dll
+C:\TraningWorkshop\csharp\Library_desktop\Library_desktop\bin\Release\net8.0-windows\app.publish\Library_desktop.deps.json
+C:\TraningWorkshop\csharp\Library_desktop\Library_desktop\bin\Release\net8.0-windows\app.publish\Library_desktop.runtimeconfig.json
+C:\TraningWorkshop\csharp\Library_desktop\Library_desktop\bin\Release\net8.0-windows\app.publish\Library_desktop.pdb
