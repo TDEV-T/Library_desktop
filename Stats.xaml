@@ -1,0 +1,33 @@
+﻿<Window x:Class="Library_desktop.Stats"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Library_desktop"
+        mc:Ignorable="d"
+        Title="Stats" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Content="Books:"/>
+        <TextBox Grid.Row="0" Grid.Column="1" Name="BookBox"/>
+
+        <Label Grid.Row="1" Grid.Column="0" Content="Members:"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Name="MemberBox"/>
+
+        <Label Grid.Row="2" Grid.Column="0" Content="Borrow:"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Name="BorrowBox"/>
+
+        <Label Grid.Row="3" Grid.Column="0" Content="Borrow Not Complete:"/>
+        <TextBox Grid.Row="3" Grid.Column="1" Name="BorrowNotCompleteBox"/>
+    </Grid>
+</Window>

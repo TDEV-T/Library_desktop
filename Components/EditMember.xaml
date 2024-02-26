@@ -1,0 +1,32 @@
+﻿<Window x:Class="Library_desktop.Components.EditMember"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Library_desktop.Components"
+        mc:Ignorable="d"
+        Title="EditMember" Height="450" Width="800">
+    <Grid>
+        <StackPanel Margin="20">
+            <Label Content="Username" />
+            <TextBox x:Name="MemberUsername" Text="{Binding m_user}" />
+
+            <Label Content="Name" />
+            <TextBox x:Name="MemberName" Text="{Binding m_name}" />
+
+            <Label Content="Password" />
+            <TextBox x:Name="MemberPassword" Text="{Binding m_pass}" />
+
+            <Label Content="Phone" />
+            <TextBox x:Name="MemberPhone" Text="{Binding m_phone}" />
+
+
+            <GroupBox Height="37" Margin="30">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button Content="Save" Click="SaveButton_Click" Width="200"  HorizontalAlignment="Left" />
+                    <Button Content="Delete" Click="DeleteButton_Click" Width="200" />
+                </StackPanel>
+            </GroupBox>
+        </StackPanel>
+    </Grid>
+</Window>

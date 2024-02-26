@@ -1,0 +1,20 @@
+﻿<Window x:Class="Library_desktop.Components.CreateBorrow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Library_desktop.Components"
+        mc:Ignorable="d"
+        Title="CreateBorrow" Height="450" Width="800">
+    <Grid>
+        <StackPanel Margin="20">
+            <Label Content="Member" />
+            <ComboBox x:Name="MemberComboBox" DisplayMemberPath="m_user" SelectedValuePath="m_user" SelectedValue="{Binding m_user}" ItemsSource="{Binding Members}" SelectedIndex="{Binding SelectedMemberIndex}" Margin="0 0 0 10"/>
+            <Label Content="Book" />
+            <ComboBox x:Name="BookComboBox" DisplayMemberPath="b_id" SelectedValuePath="b_id" SelectedValue="{Binding b_id}" ItemsSource="{Binding Books}" SelectedIndex="{Binding SelectedBookIndex}" Margin="0 0 0 10"/>
+            <Label Content="Borrow Date" />
+            <DatePicker x:Name="DateBorrowPicker" SelectedDate="{Binding br_date_br}" Margin="0 0 0 10"/>
+            <Button Content="Create" Click="SaveButton_Click" Margin="60"/>
+        </StackPanel>
+    </Grid>
+</Window>

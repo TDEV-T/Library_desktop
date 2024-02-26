@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Book.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Borrow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Components\CreateBook.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Components\CreateBorrow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Components\CreateMember.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Components\EditBorrowPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Components\EditMember.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Components\EditPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Components\ReturnBorrow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Member.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Stats.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="StatsPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Book.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Borrow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Components\CreateBook.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Components\CreateBorrow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Components\CreateMember.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Components\EditBorrowPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Components\EditMember.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Components\EditPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Components\ReturnBorrow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Member.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Stats.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="StatsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

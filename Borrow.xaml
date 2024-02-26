@@ -1,0 +1,73 @@
+﻿<Page x:Class="Library_desktop.Borrow"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Library_desktop"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Borrow">
+
+    <Grid Height="450" VerticalAlignment="Top">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10,11,10,20">
+            <TextBox Width="223" Height="20" Margin="10,0" Text="{Binding  search}" />
+            <Button Content="ค้นหา" Click="SearchButton_Click" Margin="10,0"/>
+            <Button Content="ยืมหนังสือ" Click="AddMemberButton_Click" Margin="10,0"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" Width="800">
+            <StackPanel.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="0"/>
+                </TransformGroup>
+            </StackPanel.RenderTransform>
+            <DataGrid x:Name="BorrowsDataGrid" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Date Borrow" Binding="{Binding br_date_br, StringFormat={}{0:dd/MM/yyyy HH:mm}}" />
+                    <DataGridTextColumn Header="Date Return" Binding="{Binding br_date_rt, StringFormat={}{0:dd/MM/yyyy HH:mm}}" />
+
+                    <DataGridTextColumn Header="Username" Binding="{Binding m_user}" />
+                    <DataGridTextColumn Header="Book ID" Binding="{Binding b_id}" />
+                    <DataGridTextColumn Header="Borrow Fine" Binding="{Binding br_fine}" />
+
+                    <DataGridTemplateColumn Header="Manage">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="Edit" Click="EditButton_Click" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+                    <DataGridTemplateColumn Header="Return">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="Return" Click="ReturnButton_Click">
+                                    <Button.Style>
+                                        <Style TargetType="Button">
+                                            <Setter Property="Visibility" Value="Collapsed" />
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding br_date_rt}" Value="{x:Null}">
+                                                    <Setter Property="Visibility" Value="Visible" />
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Button.Style>
+                                </Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <TextBlock x:Name="BooksTextBlock" />
+        </StackPanel>
+    </Grid>
+</Page>
